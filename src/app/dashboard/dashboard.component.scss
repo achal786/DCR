@@ -1,0 +1,149 @@
+.field-row {
+    display: flex;
+}
+.col-2{
+    width: 20%;
+    display: inline-block;
+}
+.p-field{
+    padding-right: 10px;
+}
+thead{
+    font-size: 13px;
+}
+:host ::ng-deep {
+    .p-datatable-wrapper{
+overflow:auto
+    }
+    .p-datatable table {
+
+        width: max-content;
+    }
+    .p-fluid .p-button {
+        width: min-content;
+    }
+    .p-datatable .p-datatable-tbody > tr > td {
+        text-align: left;
+        border: 1px solid #e9ecef;
+        border-width: 0 0 1px 0;
+        padding:0rem !important;
+    }
+    .p-datatable .p-datatable-thead > tr > th {
+        text-align: left;
+        padding: 1px;
+        border: 1px solid #e9ecef;
+        border-width: 0 0 1px 0;
+        font-weight: 600;
+        color: #495057;
+        background: #f8f9fa;
+        transition: box-shadow 0.2s;
+    }
+    .p-paginator {
+        .p-paginator-current {
+            margin-left: auto;
+        }
+    }
+    
+    .p-progressbar {
+        height: .5rem;
+        background-color: #D8DADC;
+    
+        .p-progressbar-value {
+            background-color: #607D8B;
+        }
+    }
+    thead{
+        font-size: 13px;
+    }
+    .table-header {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .p-calendar .p-datepicker {
+        min-width: 25rem;
+    
+        td {
+            font-weight: 400;
+        }
+    }
+    
+    .p-datatable.p-datatable-customers {
+        .p-datatable-header {
+            padding: 1rem;
+            text-align: left;
+            font-size: 1.5rem;
+        }
+    
+        .p-paginator {
+            padding: 1rem;
+        }
+    
+        .p-datatable-thead > tr > th {
+            text-align: left;
+            padding:0px !important;
+        }
+        
+        .p-datatable-tbody > tr > td {
+            cursor: auto;
+            padding:0rem !important;
+        }
+    
+        .p-dropdown-label:not(.p-placeholder) {
+            text-transform: uppercase;
+        }
+    }
+    
+    /* Responsive */
+    .p-datatable-customers .p-datatable-tbody > tr > td .p-column-title {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    :host ::ng-deep {
+        .p-datatable .p-datatable-tbody > tr > td {
+            text-align: left;
+            border: 1px solid #e9ecef;
+            border-width: 0 0 1px 0;
+            padding:0rem !important;
+        }
+        .p-datatable {
+            &.p-datatable-customers {
+                .p-datatable-thead > tr > th,
+                .p-datatable-tfoot > tr > td {
+                    display: none !important;
+                }
+    
+                .p-datatable-tbody > tr {
+                    border-bottom: 1px solid var(--layer-2);
+    
+                    > td {
+                        text-align: left;
+                        display: block;
+                        border: 0 none !important;
+                        width: 100% !important;
+                        float: left;
+                        clear: left;
+                        border: 0 none;
+                        padding:0rem !important;
+    
+                        .p-column-title {
+                            padding: .4rem;
+                            min-width: 30%;
+                            display: inline-block;
+                            margin: -.4rem 1rem -.4rem -.4rem;
+                            font-weight: bold;
+                        }
+    
+                        .p-progressbar {
+                            margin-top: .5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
